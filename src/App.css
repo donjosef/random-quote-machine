@@ -10,6 +10,10 @@
   max-width: 90%;
 }
 
+.Quote {
+  margin-bottom: 20px;
+}
+
 .text {
   font-size: 1.8rem;
 }
