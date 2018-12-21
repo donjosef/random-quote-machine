@@ -10,11 +10,19 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.getQuote();
+  }
+
+  getQuote = () => {
     fetch('https://talaikis.com/api/quotes/random/')
     .then(res => res.json())
     .then(data => {
       this.setState({quote: data})
-    })
+    });
+  }
+
+  getQuoteHandler = () => {
+    this.getQuote();
   }
 
   render() {
@@ -22,7 +30,7 @@ class App extends Component {
       <div className="App" id="quote-box">
         <Quote quote={this.state.quote}/>
         <Button type="tweet"/>
-        <Button type="new-quote"/>
+        <Button type="new-quote" click={this.getQuoteHandler}/>
       </div>
     );
   }

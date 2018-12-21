@@ -7,7 +7,7 @@ import { faRetweet } from '@fortawesome/free-solid-svg-icons'
 library.add(faRetweet)
 
 export default function Button(props) {
-    const { type } = props;
+    const { type, click } = props;
     let btn;
     let btnClass;
     if (type === 'tweet') {
@@ -22,7 +22,7 @@ export default function Button(props) {
 
     if (type === 'new-quote') {
         btnClass = 'btn-new-quote';
-        btn = <button className={btnClass} id="new-quote">New Quote</button>
+        btn = <button className={btnClass} id="new-quote" onClick={click}>New Quote</button>
     }
 
     return btn;
