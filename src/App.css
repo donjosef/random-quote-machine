@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   margin: 50px auto;
   text-align: center;
@@ -10,4 +14,18 @@
   text-align: right;
   font-style: italic;
   display: block;
+}
+
+.btn-tweet {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+.btn-new-quote {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: 10px;
+  background: #95c909;
+  border: 2px solid #95c909;
+  color: white;
 }
