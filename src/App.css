@@ -6,11 +6,15 @@
   margin: 50px auto;
   text-align: center;
   padding: 20px;
-  width: 500px;
+  width: 600px;
   max-width: 90%;
 }
 
+.text {
+  font-size: 1.8rem;
+}
 .author {
+  font-size: 1.3rem;
   text-align: right;
   font-style: italic;
   display: block;
