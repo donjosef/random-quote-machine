@@ -38,6 +38,10 @@ class App extends Component {
 
   getQuoteHandler = () => {
     this.getQuote();
+    const r = this.toHexColor(Math.floor(Math.random() * 256));
+    const g = this.toHexColor(Math.floor(Math.random() * 256));
+    const b = this.toHexColor(Math.floor(Math.random() * 256));
+    this.setState({ randomColor: `#${r}${g}${b}` });
   }
 
   render() {
@@ -45,7 +49,10 @@ class App extends Component {
       <div className="wrapper" style={{background: this.state.randomColor}}>
         <div className="App" id="quote-box">
           <Quote quote={this.state.quote} color={this.state.randomColor}/>
-          <Button type="tweet" text={this.state.quote ? this.state.quote.quote : ''} />
+          <Button 
+            type="tweet" 
+            text={this.state.quote ? this.state.quote.quote : ''} 
+            color={this.state.randomColor}/>
           <Button type="new-quote" click={this.getQuoteHandler} />
         </div>
       </div>
