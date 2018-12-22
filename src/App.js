@@ -46,7 +46,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="wrapper" style={{background: this.state.randomColor}}>
+      <div className="wrapper" style={{
+        background: this.state.randomColor,
+        transition: 'background 0.3s ease-in-out'
+        }}>
         <div className="App" id="quote-box">
           <Quote quote={this.state.quote} color={this.state.randomColor}/>
           <Button 
