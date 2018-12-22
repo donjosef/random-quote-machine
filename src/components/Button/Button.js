@@ -7,7 +7,7 @@ import { faRetweet } from '@fortawesome/free-solid-svg-icons'
 library.add(faRetweet)
 
 export default function Button(props) {
-    const { type, click, text } = props;
+    const { type, click, text, color } = props;
 
     let btn;
     let btnClass;
@@ -18,7 +18,7 @@ export default function Button(props) {
             id="tweet-quote" 
             href={`https://twitter.com/intent/tweet?text=${text}&related=freecodecamp&hashtags=quotes`} 
             title="Tweet this quote!">
-            <FontAwesomeIcon icon="retweet" />
+            <FontAwesomeIcon icon="retweet" color={color}/>
         </a>
     }
 
