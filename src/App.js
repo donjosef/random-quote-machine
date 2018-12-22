@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <div className="wrapper" style={{background: this.state.randomColor}}>
         <div className="App" id="quote-box">
-          <Quote quote={this.state.quote} />
+          <Quote quote={this.state.quote} color={this.state.randomColor}/>
           <Button type="tweet" text={this.state.quote ? this.state.quote.quote : ''} />
           <Button type="new-quote" click={this.getQuoteHandler} />
         </div>
