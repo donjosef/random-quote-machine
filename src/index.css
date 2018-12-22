@@ -1,4 +1,15 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root,
+.wrapper {
+  height: 100%;
+}
+
+.wrapper {
+  padding-top: 50px;
 }
