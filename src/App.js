@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <div className="App" id="quote-box">
         <Quote quote={this.state.quote}/>
-        <Button type="tweet"/>
+        <Button type="tweet" text={this.state.quote ? this.state.quote.quote : ''}/>
         <Button type="new-quote" click={this.getQuoteHandler}/>
       </div>
     );
